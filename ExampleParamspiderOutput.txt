@@ -1,0 +1,4 @@
+http://testphp.vulnweb.com:80/secured/phpinfo.php?=FUZZ
+http://testphp.vulnweb.com/redir.php?Xcb8hN&r=FUZZ
+http://testphp.vulnweb.com/redir.php?8HeQH1&r=FUZZ
+
