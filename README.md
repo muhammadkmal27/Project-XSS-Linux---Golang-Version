@@ -3,36 +3,23 @@ Prerequisites
 - Google Chrome / Chromium (Required for headless browser engine)
 
 Installation
-1. Clone the Repository
+Clone the Repository
 ```
-git clone https://github.com/muhammadkmal27/Project-XSS-Linux---Golang-Version.git
-cd xss-scanner
-```
-2. Setup Modules & Dependencies
-```
-go mod init xss-scanner
-go get github.com/chromedp/chromedp
-go get github.com/chromedp/cdproto/page
-go get github.com/fatih/color
-go mod tidy
-```
-3. Build the Binary
-```
-go build -o xss_scanner xss_scanner.go
+go install github.com/muhammadkmal27/imat-xss@latest
 ```
 
 Usage
-Run the tool and provide the required paths:
+After installation, you can move the binary to /usr/bin so you can run it from anywhere without typing the full path:
 ```
-./xss_scanner
+sudo cp $(go env GOPATH)/bin/imat-xss /usr/local/bin/
 ```
-or
+
+Now, just type the command to start:
 ```
-sudo cp -r xss_scanner /usr/bin
-xss_scanner
+imat-xss
 ```
 
 Required Inputs:
-- Base URL: Target domain/IP (e.g., https://34.278.22.12/)
+- Base URL: Target domain/IP (e.g., https://example.com/ or https://34.278.22.12/)
 - ParamSpider File: Path to your ParamSpider results (ensure FUZZ is present)
 - Payload File: Path to your xss.txt file
